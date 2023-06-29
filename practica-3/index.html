@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+  </head>
+
+  <body class="body-page">
+    <div class="wrapper">
+      <div>
+        <h1 class="main-title">Bienvenido al Centro de Contacto</h1>
+      </div>
+
+      <main class="main-page">
+        <div class="info-container">
+          <h2 class="second-title">Centro de información</h2>
+          <p>
+            ¡Gracias por visitar nuestro centro de Información! Aquí podrás ver
+            a que nos dedicamos con detenimiento
+          </p>
+          <a class="page-link" href="about.html">Acerca nosotros</a>
+        </div>
+
+        <div class="info-container">
+          <h2 class="second-title">Centro de Contacto</h2>
+          <p>
+            Si deseas comunicarte con nosotros, por favor utiliza los detalles
+            de contacto proporcionados en la página de
+          </p>
+          <a class="page-link" href="contact.html">Contacto</a>
+        </div>
+      </main>
+
+      <div class="info-container-end">
+        <h2 class="second-title">Y Recordá!</h2>
+        <p>
+          Nuestro equipo de agentes capacitados está listo para ayudarte con tus
+          necesidades y responder a tus preguntas!
+        </p>
+      </div>
+
+      <footer class="footer-bg">
+        <p>&copy; 2023 Centro de Contacto. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+
+    <style>
+      body {
+        background: linear-gradient(
+          52deg,
+          rgba(0, 107, 108, 1) 0%,
+          rgba(0, 172, 167, 1) 85%
+        );
+      }
+      .main-page {
+        display: flex;
+        justify-content: space-evenly;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .main-page p {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .main-title {
+        color: #fff;
+        text-align: center;
+        font-size: 35px;
+      }
+
+      .second-title {
+        text-align: center;
+        font-size: 28px;
+      }
+
+      .info-container {
+        display: flex;
+        background-color: #e6e6e6;
+        border-radius: 15px;
+        padding: 49px;
+        width: 729px;
+        box-shadow: 5px 5px 10px #0000002a;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info-container a {
+        margin-bottom: 15px;
+        font-size: 20px;
+      }
+
+      .info-container-end {
+        margin: 0 auto;
+        margin-top: 50px;
+        background-color: #e6e6e6;
+        border-radius: 15px;
+        padding: 49px;
+        width: 729px;
+        box-shadow: 5px 5px 10px #0000002a;
+      }
+
+      .info-container-end p {
+        font-size: 20px;
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .page-link {
+        background-color: #00948e;
+        border-radius: 5px;
+        color: #fff;
+        padding: 10px;
+        text-decoration: none;
+      }
+
+      .page-link:hover {
+        background-color: #006b68;
+        transition: all 0.2s ease;
+        box-shadow: 0px 0px 8px #00000071;
+      }
+
+      .page-link:active {
+        box-shadow: 0px 0px 2px #00000071;
+      }
+
+      .footer-bg {
+        color: #fff;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>
