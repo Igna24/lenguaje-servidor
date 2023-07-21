@@ -1,0 +1,53 @@
+# Registro de Cartas Yu-Gi-Oh!
+
+## Descripción
+Este proyecto es un sistema de registro y búsqueda de cartas del juego de cartas Yu-Gi-Oh! El sistema permite agregar nuevas cartas, editar cartas existentes, eliminar cartas y buscar cartas por nombre o tipo. Además, las cartas se muestran paginadas para facilitar la navegación.
+
+## Creado por
+Ignacio Marín Garro
+
+## Derechos de autor
+Todos los derechos reservados. Este trabajo es propiedad exclusiva de Ignacio Marín Garro. La distribución y reproducción total o parcial de este proyecto sin el consentimiento explícito del autor está prohibida.
+
+## Requisitos previos
+- Node.js y npm deben estar instalados en el sistema para ejecutar el servidor.
+- Se debe tener acceso a una base de datos MongoDB y se debe configurar la variable `MONGODB_URI` en `server.js` con la URL de conexión.
+
+## Instalación
+1. Descargar el código fuente desde el repositorio.
+2. Ejecutar el siguiente comando en la terminal para instalar las dependencias del servidor:
+  - $ npm install
+
+## Instrucciones de uso
+1. Ejecutar el servidor con el siguiente comando:
+   - $ node server.js
+
+2. Acceder al sistema a través del navegador web en la URL `http://localhost:3000`.
+3. En la página principal, se puede registrar una nueva carta completando el formulario de creación.
+4. Para editar una carta existente, hacer clic en la carta deseada en la lista de cartas creadas, lo que mostrará el formulario de edición.
+5. Para eliminar una carta, hacer clic en el botón "Eliminar" en el formulario de edición.
+6. Para buscar cartas, ingresar el término de búsqueda en el campo de búsqueda y hacer clic en el botón "Buscar".
+7. Se puede filtrar las cartas por tipo utilizando el menú desplegable "Filtrar por tipo".
+8. Las cartas se muestran paginadas, y se puede navegar entre las páginas haciendo clic en los números de página en la parte inferior.
+
+## Estructura del proyecto
+- `server.js`: Archivo principal que contiene el servidor Express y las rutas para gestionar las cartas en la base de datos MongoDB.
+- `scripts.js`: Archivo de scripts de JavaScript que maneja la interacción con el DOM y las solicitudes AJAX para cargar, editar, eliminar y buscar cartas en el servidor.
+- `index.html`: Página principal del sistema que muestra el formulario para agregar nuevas cartas y la lista de cartas creadas.
+- `styles.css`: Hoja de estilos para la apariencia del sitio.
+
+## Tecnologías utilizadas
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose (ODM)
+- jQuery
+- HTML5
+- CSS3
+
+## Notas adicionales
+- Asegúrese de tener una conexión válida a la base de datos MongoDB antes de ejecutar el servidor para evitar errores en las solicitudes de base de datos.
+- Este proyecto ha sido desarrollado con fines educativos y puede requerir ajustes y mejoras adicionales para su implementación en un entorno de producción.
+
+**¡Disfruta gestionando tus cartas Yu-Gi-Oh!**
+
