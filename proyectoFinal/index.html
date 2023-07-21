@@ -1,0 +1,145 @@
+<!-- Definición del tipo de documento -->
+<!DOCTYPE html>
+<!-- Definición del idioma -->
+<html lang="en">
+
+<head>
+  <!-- Codificación de caracteres -->
+  <meta charset="UTF-8" />
+  <!-- Configuración para que el sitio se ajuste al tamaño de pantalla -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Enlace a la hoja de estilos externa "styles.css" -->
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Configuración para conectar con el servicio de fuentes de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Importar la fuente "Roboto Slab" desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Importar la librería jQuery desde el servidor de código abierto de jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Título de la página -->
+  <title>Registro de Cartas Yu-Gi-Oh!</title>
+</head>
+
+<body>
+  <!-- Contenedor principal del sitio -->
+  <div class="wrapper">
+    <!-- Título principal de la página -->
+    <h1 class="main-title">Registro de Cartas Yu-Gi-Oh</h1>
+
+    <!-- Formulario para registrar una nueva carta -->
+    <form id="form" class="form-cards">
+      <!-- Título del formulario -->
+      <h2>Crea una Nueva carta</h2>
+      <!-- Campo para seleccionar el tipo de carta -->
+      <div class="form-fields">
+        <label for="tipo">Elige el tipo de carta</label>
+        <select name="tipo" id="tipo">
+          <option value="Monstruo" class="monster-card">Monstruo</option>
+          <option value="Mágica">Mágica</option>
+          <option value="Trampa">Trampa</option>
+        </select>
+      </div>
+
+      <!-- Campo para ingresar el nombre de la carta -->
+      <div class="form-fields">
+        <label for="nombre">Nombre de la carta</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre de la carta" required />
+      </div>
+
+      <!-- Campo para ingresar la descripción de la carta -->
+      <div class="form-fields">
+        <label for="descripcion">Descripcion de la carta</label>
+        <textarea name="descripcion" id="descripcion" rows="4" placeholder="Descripcion de la carta"
+          required></textarea>
+      </div>
+
+      <!-- Campo para ingresar los puntos de batalla de la carta -->
+      <div class="form-fields">
+        <label for="puntosBatalla">Puntos de batalla</label>
+        <input type="number" name="puntosBatalla" id="puntosBatalla" required placeholder="Puntos de batalla" />
+        <!-- Botón para enviar el formulario -->
+        <input type="submit" class="submit-button" value="Registrar" />
+      </div>
+    </form>
+
+    <!-- Formulario de edición de cartas (inicialmente oculto) -->
+    <div id="edit-form-container" class="hidden">
+      <!-- Título del formulario de edición -->
+      <h2>Editar Carta</h2>
+      <form id="edit-form" class="form-cards">
+        <!-- Campo para editar el tipo de carta -->
+        <div class="form-fields">
+          <label for="edit-tipo">Edita el tipo de carta</label>
+          <select name="tipo" id="edit-tipo">
+            <option value="Monstruo" class="monster-card">Monstruo</option>
+            <option value="Mágica">Mágica</option>
+            <option value="Trampa">Trampa</option>
+          </select>
+        </div>
+
+        <!-- Campo para editar el nombre de la carta -->
+        <div class="form-fields">
+          <label for="edit-nombre">Edita el nombre de la carta</label>
+          <input type="text" name="nombre" id="edit-nombre" placeholder="Edita el nombre" required />
+        </div>
+
+        <!-- Campo para editar la descripción de la carta -->
+        <div class="form-fields">
+          <label for="edit-descripcion">Edita la descripcion de la carta</label>
+          <textarea name="descripcion" id="edit-descripcion" rows="4" placeholder="Edita la descripcion"
+            required></textarea>
+        </div>
+
+        <!-- Campo para editar los puntos de batalla de la carta -->
+        <div class="form-fields">
+          <label for="edit-puntosBatalla">Edita los puntos de batalla</label>
+          <input type="number" name="puntosBatalla" id="edit-puntosBatalla" required placeholder="Edita los puntos" />
+          <!-- Campo oculto para almacenar el ID de la carta a editar -->
+          <input type="hidden" name="edit-id" id="edit-id" />
+          <!-- Botón para enviar el formulario de edición -->
+          <input type="submit" class="submit-button" value="Guardar cambios" />
+          <!-- Botón para eliminar la carta -->
+          <button id="delete-button" class="delete-button">Eliminar</button>
+        </div>
+      </form>
+      <br>
+      <!-- Formulario de búsqueda de cartas -->
+      <form id="buscar-form" class="search-form">
+        <input type="text" id="buscar-input" placeholder="Buscar por nombre o tipo" />
+        <!-- Botón para realizar la búsqueda -->
+        <input type="submit" id="buscar-button" value="Buscar" />
+      </form>
+      <br>
+      <!-- Contenedor del filtro por tipo -->
+      <div id="filtro-tipo-container" class="form-fields">
+        <label for="filtro-tipo">Filtrar por tipo:</label>
+        <!-- Selección para filtrar por tipo -->
+        <select name="filtro-tipo" id="filtro-tipo">
+          <option value="">Todos</option>
+          <option value="Monstruo">Monstruo</option>
+          <option value="Mágica">Mágica</option>
+          <option value="Trampa">Trampa</option>
+        </select>
+      </div>
+
+      <!-- Título para la lista de cartas creadas -->
+      <h2>Cartas Creadas</h2>
+      <!-- Lista de cartas registradas -->
+      <ul id="lista-cartas" class="registered-cards"></ul>
+
+    </div>
+
+    <!-- Contenedor para mostrar la paginación -->
+    <div id="pagination-container">
+      <!-- Lista de paginación -->
+      <ul id="pagination"></ul>
+    </div>
+
+    <!-- Script que importa el archivo "scripts.js" -->
+    <script src="scripts.js"></script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+/* Estilos globales */
+body {
+  font-family: 'Roboto Slab', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el formulario */
+.form-cards {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-fields {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para la lista de cartas */
+.registered-cards {
+  list-style: none;
+  padding: 0;
+}
+
+.registered-cards li {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para los botones de búsqueda y filtrado */
+.search-form {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#buscar-input {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#buscar-button,
+#filtro-tipo {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para el contenedor de paginación */
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pagination {
+  list-style: none;
+  padding: 0;
+}
+
+#pagination li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#pagination li a {
+  display: block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+#pagination li a:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 600px) {
+  .form-cards,
+  .registered-cards li {
+    padding: 15px;
+  }
+  
+  .submit-button,
+  .delete-button {
+    max-width: 200px;
+  }
+  
+  #buscar-input {
+    max-width: 250px;
+  }
+}
